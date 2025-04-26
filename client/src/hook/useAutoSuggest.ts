@@ -19,7 +19,7 @@ export function useAutoSuggest(query: string) {
   const [loading, setLoading] = useState(false);
   const [open, setOpen] = useState(false);
   const cache = useRef<Cache>({});
-  const debounceTimer = useRef<NodeJS.Timeout>();
+  const debounceTimer = useRef<NodeJS.Timeout | undefined>(undefined);
 
   const fetchSuggestions = useCallback(async (keyword: string) => {
     if (!keyword.trim()) {

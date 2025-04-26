@@ -35,3 +35,15 @@ pnpm-debug.log*
 
 # TypeScript
 *.tsbuildinfo
+
+# Secrets and tokens
+.env
+*.token
+*.secret
+.tokens/
+credentials.json
+token.json
+.pat
+.access_tokens
+auth.config.js
+auth.config.ts
