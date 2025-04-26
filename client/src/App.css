@@ -1,0 +1,44 @@
+/* src/App.css */
+
+/* 限制最大宽度，居中容器 */
+#root {
+  @apply max-w-[1280px] mx-auto p-8 text-center;
+}
+
+/* logo 样式动画 */
+.logo {
+  @apply h-24 p-6 transition-[filter] duration-300 will-change-auto;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em rgba(100, 108, 255, 0.67));
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em rgba(97, 218, 251, 0.67));
+}
+
+/* 旋转动画定义 */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 如果用户不偏好减少动画，就启用 logo 动画 */
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* 卡片容器样式 */
+.card {
+  @apply p-8 bg-card text-card-foreground border border-border rounded-lg shadow-md;
+}
+
+/* 引导文字样式 */
+.read-the-docs {
+  @apply text-muted-foreground;
+}
